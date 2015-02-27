@@ -158,10 +158,29 @@ puts "Repeater " * 4
 #Escape characters (escape only ' and \)
 puts "I'm escaping \' and \\ but not \d \n"
 
+#=============================================
+# Conversion
+#=============================================
+#to string
+puts 0.52323423.to_s
+puts String(0.52323423)
+
+#to integer
+puts '99.23423'.to_i
+puts Integer('99')
+"30 seconds".to_i
+# This won't work: Integer("30 seconds")
+
+#to float
+puts '99.23423'.to_f
+puts Float('99.23423')
+
+
+
 #==============================================
 # Gather Input
 #==============================================
 print "This is how you request an input from user (Athena, Bevelor, whatever): "
-input = gets.chomp
+input = gets.chomp	# "gets" input, then "chomp" off the end of line
 input.upcase! #Input processing for good practise.
 puts "This is your input after processing:  #{input}"
