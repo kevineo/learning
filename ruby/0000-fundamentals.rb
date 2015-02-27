@@ -151,6 +151,13 @@ print "\n"
 #Replacement
 puts sentence.gsub!(/s/, " <REPLACED!> ")
 
+#Arithmetic
+puts "A " + "Quick " + "Brown Fox " + "Jumps " + "Over " + "The " + "Lazy Dog."
+puts "Repeater " * 4
+
+#Escape characters (escape only ' and \)
+puts "I'm escaping \' and \\ but not \d \n"
+
 #==============================================
 # Gather Input
 #==============================================
