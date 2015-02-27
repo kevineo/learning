@@ -158,6 +158,26 @@ puts "Repeater " * 4
 #Escape characters (escape only ' and \)
 puts "I'm escaping \' and \\ but not \d \n"
 
+#Methods
+lineWidth=50; var1 = "aAbBcCDdEe"
+puts var1.upcase
+puts var1.downcase
+puts var1.swapcase
+puts var1.capitalize
+puts var1.reverse
+
+	#alignment
+puts var1.center(lineWidth)
+puts var1.ljust(lineWidth)
+puts var1.rjust(lineWidth)
+
+puts var1.center lineWidth
+puts var1.ljust lineWidth
+puts var1.rjust lineWidth
+
+puts var1.ljust(lineWidth/2) + var1.rjust(lineWidth/2)
+
+
 #=============================================
 # Conversion
 #=============================================
