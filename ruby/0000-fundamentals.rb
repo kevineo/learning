@@ -99,6 +99,23 @@ puts "Sorting: accending:  #{books}"
 books.sort! { |firstBook, secondBook| secondBook <=> firstBook }
 puts "Sorting: decending: #{books}"
 
+#join with join param
+puts books.join(', ')
+puts books.join(' ==== ')
+
+#length (calculate array length)
+puts books.length
+
+#push (add element to end of array)
+books.push 'whatever'
+puts books.to_s
+puts books.length
+
+#pop (print the last element from the array and then remove it)
+puts books.pop
+puts books.to_s
+puts books.length
+
 #standard Looping
 standard_array.each	{ |item| puts "Standard array: #{item}"	}
 string_array.each	{ |item| puts "String array: #{item}"	}
