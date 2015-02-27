@@ -111,6 +111,10 @@ books.push 'whatever'
 puts books.to_s
 puts books.length
 
+#map to create an array from existing
+ret = books.map { |element| element.length }
+puts ret.to_s
+
 #pop (print the last element from the array and then remove it)
 puts books.pop
 puts books.to_s
