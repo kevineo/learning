@@ -51,10 +51,10 @@ float			= 482.911
 standard_array		= [5, 2, 1, 4, 3]
 string_array		= ["This is ", "a string ", "array\n"]
 multi_d_array		= [[2, "Hello", true], [3, "Data", false]]
-hash_array 		= {	"Zion1" => "Blue",
-                		"Zion2" => "Red",
-                		"Zion3" => "Green",
-                		"Zion4" => "Yellow"
+hash_array		= {	"Zion1" => "Blue",
+				"Zion2" => "Red",
+				"Zion3" => "Green",
+				"Zion4" => "Yellow"
 			 }
 dictionary_symbol	= { label1: 5, label2: 3, label3: 22, }
 
@@ -142,8 +142,8 @@ puts "Redaction Example:"
 sentence = "A Quick Brown Fox Jumps Over The Lazy Dog"
 words = sentence.split(" ")	#Split Sentence to words
 words.each do |item|
-        if item == "Brown" then print "<REDACTED> "
-        else print "#{item} "
+	if item == "Brown" then print "<REDACTED> "
+	else print "#{item} "
 	end
 end
 print "\n"
