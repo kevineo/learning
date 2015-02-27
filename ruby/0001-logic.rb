@@ -27,6 +27,24 @@ menu_options = ["add) Add a Movie",
                 "display) Display a Movie",
                 "delete) Delete a Movie",]
 
+
+#==============================================
+# Comparison
+#==============================================
+puts 1 > 2			#more than
+puts 1 < 2			#less than
+puts 5 >= 5			#more than and equal
+puts 5 <= 5			#less than and equal
+puts 5 <= 4			#less than and equal
+puts 5 == 5			#is equal
+puts 5 != 5			#not equal
+puts 'cat' < 'dog'		#Go alphabetical
+puts 'cat' < 'Dog'		#Capitalized goes first
+puts true and true		# using and
+puts true or false		# using or
+puts not true			# using not
+
+
 #==============================================
 # Ternary Operator
 #==============================================
