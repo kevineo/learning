@@ -44,6 +44,11 @@ puts true and true		# using and
 puts true or false		# using or
 puts (not true)			# using not
 
+example = (true or false) and
+	  true and
+	  true and
+	  (not true) and
+	  true
 
 #==============================================
 # Ternary Operator
