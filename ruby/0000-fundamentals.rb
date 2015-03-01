@@ -218,52 +218,6 @@ puts Float('99.23423')
 
 
 #==============================================
-# Math
-#==============================================
-#power e.g. 5^2
-puts 5**2
-
-#divide
-puts 10/5
-
-#remainder
-puts 11%5
-
-#add
-puts 5 + 5
-
-#subtract
-puts 5 - 3
-
-#multiply
-puts 5 * 2
-
-#random
-puts rand(101)		#full random
-puts rand(100)
-puts rand(1)
-puts rand
-
-puts srand 1776		#repeatable random by seeding
-puts rand(100)
-puts rand(100)
-puts rand(100)
-puts srand 1776		#repeatable random by seeding
-puts rand(100)
-puts rand(100)
-puts rand(100)
-
-puts Math::PI
-puts Math::E
-puts Math::cos(45)
-puts Math::sin(45)
-puts Math::tan(Math::PI/4)
-puts Math::log(Math::E**2)
-puts ((1 + Math.sqrt(5))/2)
-
-(5..10).inject(0) { |sum, x| sum += x**3 }
-
-#==============================================
 # Gather Input
 #==============================================
 print "This is how you request an input from user (Athena, Bevelor, whatever): "
