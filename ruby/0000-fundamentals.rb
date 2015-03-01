@@ -155,6 +155,14 @@ symbols.each { |symbol| puts "Symbol: #{symbol}" }
 dictionary_symbol.each_key { |key| print "Symbol Each_Key: #{key}\n" }
 dictionary_symbol.each_value { |value| print "Symbol Each_Value: #{value}\n" }
 
+#Using .all? to run through all elements in an array
+puts [1, 2, 3].all? { |x| x.is_a? Fixnum }
+
+#Using .find_all to loop through all elements
+value = [1, 2, 2, 3, 4, 5]
+puts value.find_all { |x| value.count(x) == 1}
+
+
 #==============================================
 # Strings Manipulation
 #==============================================
