@@ -42,7 +42,7 @@ puts 'cat' < 'dog'		#Go alphabetical
 puts 'cat' < 'Dog'		#Capitalized goes first
 puts true and true		# using and
 puts true or false		# using or
-puts not true			# using not
+puts (not true)			# using not
 
 
 #==============================================
