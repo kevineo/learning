@@ -24,6 +24,8 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #==============================================
 # Coding Standards
+# Readability = 1st priority
+# Concise = 2nd
 #==============================================
 require 'prime'
 
@@ -40,8 +42,12 @@ puts first_n_primes(10)
 
 #==============================================
 # Another Example
+# Class : Use Camel case  "ThisIsCamelStyle"
+# Module & Method : Use snake case "this_is_snake"
+# Constant: Use upper case: SECONDARY_BIT
+# Variables: use snake case
 #==============================================
-class Account
+class BankAccount
 	attr_reader :name, :balance
 	def initialize(name, balance=100)
 		@name = name
@@ -72,7 +78,7 @@ class Account
 	end
 end
 
-checking_account = Account.new("hydra", 1000)
+checking_account = BankAccount.new("hydra", 1000)
 checking_account.display_balance(11)
 checking_account.display_balance(1234)
 checking_account.withdraw(1234, 5)
