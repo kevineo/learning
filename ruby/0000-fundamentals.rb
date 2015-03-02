@@ -162,6 +162,10 @@ puts [1, 2, 3].all? { |x| x.is_a? Fixnum }
 value = [1, 2, 2, 3, 4, 5]
 puts value.find_all { |x| value.count(x) == 1}
 
+#Sort Mix Array
+sam = [ 1, "2", "3", 4, "5"]
+puts sam.grep(Fixnum).sort + sam.grep(String).sort	#Number before String
+puts sam.grep(String).sort + sam.grep(Fixnum).sort	#String before Number
 
 #==============================================
 # Strings Manipulation
