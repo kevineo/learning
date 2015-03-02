@@ -39,6 +39,8 @@ a super long comment
 print "This is a basic print that needs EOL\n"
 puts "This handles everything for you."
 
+# Debug 'inspect' and then 'puts'
+p ["this", "that"]
 
 #==============================================
 # Variables
