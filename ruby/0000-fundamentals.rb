@@ -174,6 +174,9 @@ puts sam.grep(String).sort + sam.grep(Fixnum).sort	#String before Number
 #Select elements in an array
 p [1, 2, 3, 4, 5].select { |value| value.odd? }
 
+#Use .each_slice to slice array into multiple arrays
+[1, 2, 3, 4, 5, 6].each_slice(2) { |x| p x }
+
 #==============================================
 # Strings Manipulation
 #==============================================
