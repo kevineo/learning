@@ -169,6 +169,9 @@ sam = [ 1, "2", "3", 4, "5"]
 puts sam.grep(Fixnum).sort + sam.grep(String).sort	#Number before String
 puts sam.grep(String).sort + sam.grep(Fixnum).sort	#String before Number
 
+#Select elements in an array
+p [1, 2, 3, 4, 5].select { |value| value.odd? }
+
 #==============================================
 # Strings Manipulation
 #==============================================
