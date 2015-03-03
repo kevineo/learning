@@ -84,6 +84,13 @@ array.each do |x|
 end
 array.each { |y| puts "Array Loop (2): #{y}"}
 
+array.each_with_index do |value, index|
+	case index
+	when 1 then puts value
+	else
+	end
+end
+
 #==============================================
 # Symbol Loop
 #==============================================
