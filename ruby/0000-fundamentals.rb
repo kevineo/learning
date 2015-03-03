@@ -163,6 +163,8 @@ puts [1, 2, 3].all? { |x| x.is_a? Fixnum }
 #Using .find_all to loop through all elements
 value = [1, 2, 2, 3, 4, 5]
 puts value.find_all { |x| value.count(x) == 1}
+	#Use .find to find an element
+puts value.find { |x| value == 3 }
 
 #Sort Mix Array
 sam = [ 1, "2", "3", 4, "5"]
