@@ -47,6 +47,15 @@ def math(input, *others)
 end
 math(1, 2, 3, 4, 5)
 
+# This is a non-destructive method
+value = "String"
+puts value.gsub("S", "X")
+puts "old value: " + value
+# This is a destructive method
+puts value.gsub!("S", "X")
+puts "old value: " + value
+
+
 #==============================================
 # Functions
 #==============================================
