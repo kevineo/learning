@@ -222,6 +222,14 @@ puts var1.ljust(lineWidth/2) + var1.rjust(lineWidth/2)
 
 
 #=============================================
+# Regular Expression
+#=============================================
+puts "Strings".index(/a|e|i|o|u|A|E|I|O|U/)
+puts "Please 243-443-2254".match(/\d{3}-\d{2}-\d{4}/)
+puts "Please 243-443-2254".match(/\d{3}[[:print:]]\d{2}[[:print:]]\d{4}/)
+
+
+#=============================================
 # Conversion
 #=============================================
 #to string
