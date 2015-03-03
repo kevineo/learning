@@ -220,6 +220,12 @@ puts var1.rjust lineWidth
 
 puts var1.ljust(lineWidth/2) + var1.rjust(lineWidth/2)
 
+	#return an index of target
+puts "Strings".index("i")
+	#return the value of a matched target, nil if nothing
+puts "Strings".match("ings")
+	#return all values of a matched target, empty array if nothing
+puts "Strings deltasZ Ranchor".scan(/\w{7}/)
 
 #=============================================
 # Regular Expression
