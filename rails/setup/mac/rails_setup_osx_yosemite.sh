@@ -1,4 +1,3 @@
-
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -8,9 +7,11 @@ brew install rbenv ruby-build
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 	# Install Ruby
-echo "Ruby Version (E.g: 2.2.3):"
-rbenv install 2.2.3
-rbenv global 2.2.3
+echo -n "Ruby Version (default: 2.2.3):"
+read version
+version=${version:=2.2.3}
+rbenv install $version
+rbenv global $version
 ruby -v
 
 # Install GIT
@@ -20,9 +21,9 @@ echo "Press ENTER to continue after the installation."
 read temp
 
 	# Setup Git
-echo "Your Name: "
+echo -n "Your Name: "
 read username
-echo "Your Email: "
+echo -n "Your Email: "
 read email
 git config --global color.ui true
 git config --global user.name $username
