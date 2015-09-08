@@ -1,12 +1,14 @@
 # Install Dependency
 sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
 # Install Ruby
 	# Install RVM
-sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+sudo apt-get install -y libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
+echo 'source ~/.rvm/scripts/rvm' >> ~/.bashrc
 
 	# Install Ruby
 echo -n "Ruby Version (default: 2.2.3):"
@@ -39,12 +41,11 @@ sudo apt-get install nodejs
 
 	# Install Rails
 gem install rails
-rbenv rehash
 
 # Install Postgresql
 sudo apt-get update
-sudo apt-get install postgresql-common postgresql-contrib
-sudo apt-get install postgresql libpq-dev
+sudo apt-get install -y postgresql-common postgresql-contrib
+sudo apt-get install -y postgresql libpq-dev
 	# Setup user for Postgresql
 sudo -u postgres createuser $USER -s
 sudo -u postgres psql --command "\\password $USER"
