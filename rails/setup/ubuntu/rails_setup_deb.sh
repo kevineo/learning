@@ -35,7 +35,6 @@ ssh-keygen -t rsa -C $email
 
 # Install Rails
 	# Install Node JS dependency
-sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
 
