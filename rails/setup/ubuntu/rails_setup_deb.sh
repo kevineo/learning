@@ -11,9 +11,8 @@ source ~/.rvm/scripts/rvm
 echo 'source ~/.rvm/scripts/rvm' >> ~/.bashrc
 
 	# Install Ruby
-echo -n "Ruby Version (default: 2.2.3):"
-read version
-version=${version:=2.2.3}
+echo 'Installing Ruby version with 2.2.3'
+version=2.2.3
 rvm install $version
 rvm use $version --default
 ruby -v

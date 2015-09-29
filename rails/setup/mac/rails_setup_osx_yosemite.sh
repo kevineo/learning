@@ -7,9 +7,8 @@ brew install rbenv ruby-build
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 	# Install Ruby
-echo -n "Ruby Version (default: 2.2.3):"
-read version
-version=${version:=2.2.3}
+echo 'Installing Ruby 2.2.3'
+version=2.2.3
 rbenv install $version
 rbenv global $version
 ruby -v
