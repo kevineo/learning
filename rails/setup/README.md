@@ -1,7 +1,7 @@
 # Rails Setup Bash Script
 This folder is created for automating Ruby on Rails installation.
 
-Version 0.2.0
+Version 0.5.0
 
 # Current support:
 1. Mac - Yosemite
