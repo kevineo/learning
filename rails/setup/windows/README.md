@@ -16,4 +16,4 @@ If you can't afford dual-boot, e.g: using an office laptop etc, then VMWare Play
 1. Go to VMWare Player https://www.vmware.com/products/player and install the player software.
 2. If you have an existing VM with Ubuntu installed, go to the folder, double click the .vmx to start. Else, skip to step 3.
 3. Follow http://processors.wiki.ti.com/index.php/How_to_Build_a_Ubuntu_Linux_host_under_VMware.
-4. Then follow the Rails setup for Ubuntu.
+4. Then follow the Rails setup for Ubuntu that can be found here https://github.com/hollowaykeanho/learning/tree/master/rails/setup.
