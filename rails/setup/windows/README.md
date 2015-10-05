@@ -4,8 +4,16 @@ After several attempts trying to install Ruby on Rails on Windows, I would sugge
 methods if possible:
 
 ## Option #1 - Dual Boot
+
 Depending on OSes and machines, dual boot is the ultimate preference and recomemndation.
-1. Follow this guide for Windows 8 and above http://www.everydaylinuxuser.com/2014/05/install-ubuntu-1404-alongside-windows.html.
+
+1. Follow this guide for Windows 8 and above:
+
+***Basic***: http://www.everydaylinuxuser.com/2014/05/install-ubuntu-1404-alongside-windows.html
+
+***Expert in computer science***: https://www.quora.com/How-do-I-dual-boot-Ubuntu-14-04-with-Windows-8-1
+
+
 > Note:
 > You'll face boot menu problem (a.k.a "bootloader issue") occasionally whenever Windows or Ubuntu is being updated.
 > Please be prepared to learn some bootloader troubleshooting for thinkering through the issue.
