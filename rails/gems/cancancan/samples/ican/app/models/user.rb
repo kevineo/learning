@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :role
   has_many :items
+
+  def assign_role
+    self.role = Role.find_by name: "Regular" if self.role.nil?
+  end
 end
