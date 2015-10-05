@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :items
   resources :roles
-  root to: 'pages#index'
+
+  authenticated :user do
+    root to: 'items#index', as: :authenticated_root
+  end
+  root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
