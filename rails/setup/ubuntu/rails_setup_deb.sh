@@ -35,7 +35,7 @@ ssh-keygen -t rsa -C $email
 # Install Rails
 	# Install Node JS dependency
 sudo apt-get update
-sudo apt-get install nodejs
+sudo apt-get install -y nodejs
 
 	# Install Rails
 gem install rails
