@@ -3,9 +3,29 @@ Ruby on Rails supports on Windows has been known to be lagging behind from Linux
 After several attempts trying to install Ruby on Rails on Windows, I would suggest the following
 methods if possible:
 
-## Option #1 - Dual Boot
+## Option #1 - VMWare Player Virtual Machine
+If you can't afford dual-boot and you have no idea how to do it, e.g: using an office laptop etc, then VMWare Player virtual machine would be a good choice and ultimate recommendation.
 
-Depending on OSes and machines, dual boot is the ultimate preference and recomemndation.
+### Installation
+1. Go to VMWare Player https://www.vmware.com/products/player and install the player software.
+2. If you have an existing VM with Ubuntu installed, go to the folder, double click the .vmx to start. Else, skip to step 3.
+3. Follow http://processors.wiki.ti.com/index.php/How_to_Build_a_Ubuntu_Linux_host_under_VMware.
+4. Then follow the Rails setup for Ubuntu that can be found here https://github.com/hollowaykeanho/learning/tree/master/rails/setup.
+
+
+## Option #2 - Dual Boot
+> WARNING:
+>
+> You should have a decent computer science knowledge in terms of bootloader, dual partitioning and data-backup before attempting this option.
+> Otherwise, if you don't have any idea with the mentioned technology, go back to option #1.
+
+Depending on OSes and machines, dual boot allows maximum hardware usage compared to VM.
+
+### Installation
+> WARNING:
+>
+> ***Backup your data before performing dual-boot installation!***
+> Failure can results in complete data losses, including the Windows partition being wiped out.
 
 1. Follow this guide for Windows 8 and above:
 
@@ -13,15 +33,7 @@ Depending on OSes and machines, dual boot is the ultimate preference and recomem
 
 ***Expert in computer science***: https://www.quora.com/How-do-I-dual-boot-Ubuntu-14-04-with-Windows-8-1
 
-
-> Note:
+> NOTE:
+>
 > You'll face boot menu problem (a.k.a "bootloader issue") occasionally whenever Windows or Ubuntu is being updated.
 > Please be prepared to learn some bootloader troubleshooting for thinkering through the issue.
-
-## Option #2 - VMWare Player Virtual Machine
-If you can't afford dual-boot, e.g: using an office laptop etc, then VMWare Player virtual machine would be a good choice.
-
-1. Go to VMWare Player https://www.vmware.com/products/player and install the player software.
-2. If you have an existing VM with Ubuntu installed, go to the folder, double click the .vmx to start. Else, skip to step 3.
-3. Follow http://processors.wiki.ti.com/index.php/How_to_Build_a_Ubuntu_Linux_host_under_VMware.
-4. Then follow the Rails setup for Ubuntu that can be found here https://github.com/hollowaykeanho/learning/tree/master/rails/setup.
