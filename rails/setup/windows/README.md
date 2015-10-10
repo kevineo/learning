@@ -4,7 +4,7 @@ After several attempts trying to install Ruby on Rails on Windows, I would sugge
 methods if possible:
 
 ## Option #1 - VMWare Player Virtual Machine
-If you can't afford dual-boot and you have no idea how to do it, e.g: using an office laptop etc, then VMWare Player virtual machine would be a good choice and ultimate recommendation.
+If you can't afford dual-boot  (e.g: using an office laptop etc) and you have no idea how to do it, then VMWare Player virtual machine would be a good choice and ultimate recommendation due to its simplified supports.
 
 ### Installation
 1. Go to VMWare Player https://www.vmware.com/products/player and install the player software.
@@ -13,13 +13,14 @@ If you can't afford dual-boot and you have no idea how to do it, e.g: using an o
 4. Then follow the Rails setup for Ubuntu that can be found here https://github.com/hollowaykeanho/learning/tree/master/rails/setup.
 
 
+
 ## Option #2 - Dual Boot
 > WARNING:
 >
 > You should have a decent computer science knowledge in terms of bootloader, dual partitioning and data-backup before attempting this option.
-> Otherwise, if you don't have any idea with the mentioned technology, go back to option #1.
+> Otherwise, if you don't have any idea with the mentioned technologies, go back to option #1.
 
-Depending on OSes and machines, dual boot allows maximum hardware usage compared to VM.
+Depending on OSes and machines, dual boot allows maximum hardware usage compared to VM solution.
 
 ### Installation
 > WARNING:
