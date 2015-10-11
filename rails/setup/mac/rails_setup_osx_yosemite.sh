@@ -46,4 +46,5 @@ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 # Done
+source ~/.bash_profile
 echo "Setup Completed. You should try generate a rails app to test out."
