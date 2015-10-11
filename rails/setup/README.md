@@ -4,13 +4,19 @@ This folder is created for automating Ruby on Rails installation.
 Version 0.5.0
 
 # Current support:
-1. Mac - Yosemite
-2. Ubuntu - 14.04 onwards
+| OS                                         | Version  |     Status     |
+|:-------------------------------------------|:--------:|:--------------:|
+| Xubuntu 14.04 64-bit                       |  0.5.0   | tested working |
+| Xubuntu 14.10 32-bit                       |  0.5.0   | tested working |
+| Mac OSX - Yosmite                          |  0.5.0   | tested working |
+| Ubuntu Mate 15.04 32-bit                   |  0.5.0   | tested working |
+| Ubuntu Mate 15.04 64-bit                   |  0.5.0   | tested working |
+| Raspberry Pi Ubuntu Mate 15.04 64-bit      |  0.5.0   | tested working |
 
 # To start
 1. Download the correct script.
 2. Go to the downloaded folder and find that script. Then, perform the following command:
-	```
+	```bash
 	$ chmod +x script_name.sh
 	
 	$ sh script_name.sh 
