@@ -49,4 +49,5 @@ sudo -u postgres createuser $USER -s
 sudo -u postgres psql --command "\\password $USER"
 
 # Done
+source ~/.bashrc
 echo "Setup Completed. You should try generate a rails app to test out."
