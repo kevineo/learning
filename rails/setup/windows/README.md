@@ -13,8 +13,20 @@ If you can't afford dual-boot  (e.g: using an office laptop etc) and you have no
 4. Then follow the Rails setup for Ubuntu that can be found here https://github.com/hollowaykeanho/learning/tree/master/rails/setup.
 
 
+## Option #2 - Use Cloud 9 virtualization
+Cloud 9 allows virtual hosting in clouds. That said you'll need internet for everyday development.
+It's an easy deployed without much complication.
 
-## Option #2 - Dual Boot
+> NOTE:
+>
+> C9 free edition is community based. It simply means open-source for others to view.
+> Consider purchasing their plan for private location.
+
+1. Go to https://c9.io/.
+2. Sign-up for an account.
+3. Deploy a custom ubuntu machine and you're ready to go.
+
+## Option #3 - Dual Boot (Pro Techie)
 > WARNING:
 >
 > You should have a decent computer science knowledge in terms of bootloader, dual partitioning and data-backup before attempting this option.
