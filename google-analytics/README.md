@@ -2,7 +2,7 @@
 
 # Video Tutorials
 Link: https://www.youtube.com/watch?v=s4R5WWWg2Vk
-
+Link 2: https://www.youtube.com/watch?v=qtSo2ERAF18
 
 # Primary Focus
 ## 1) Using Javascript to link
@@ -68,3 +68,45 @@ how user interact with the website
 
 ### Conversion
 demonstrate how to convert.
+
+## Goal Settings
+### Setting up cohort and goal
+1. To track the impact for new changes
+
+### Real Time Monitoring
+1. To watch real-time execution and immediate effects
+
+## Custom Tracking
+### URL construction (UTM Tracking)
+> **NOTE**:
+> Avoid spaces to simplify URL construction. Try to name your campaign name with '-' or '_'.
+
+
+1) Add a question mark (parameter tracking)
+```
+    http://mysite.com/?
+```
+
+
+2) Add a source parameter
+```
+    # The source is 'utm_source='
+    http://mysite.com/?utm_source=twitter
+```
+
+
+3) Add a medium by expanding analytics using '&' sign
+```
+    # The source is 'utm_medium='
+    http://mysite.com/?utm_source=twitter&utm_medium=social
+```
+
+
+4) Add a tracking campaign using '&' sign as expansion
+```
+    # The source is 'utm_campaign=< campaign name >'
+    http://mysite.com/?utm_source=twitter&utm_medium=social&utm_campaign=offer
+```
+
+
+5) More info and params on https://support.google.com/analytics/answer/1033867?hl=en
