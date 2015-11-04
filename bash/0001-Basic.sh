@@ -140,4 +140,9 @@ echo "Math:" $[1 + 1]
 
 
 
+echo ""
+# Alias
+alias command="A Binary path for execution"
+
+
 echo "End of file"
