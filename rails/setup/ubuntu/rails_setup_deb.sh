@@ -1,5 +1,26 @@
+echo -n "Your Name: "
+read username
+echo -n "Your Email: "
+read email
+
+# Install Postgresql
+sudo apt-get update -y
+sudo apt-get install -y postgresql-common postgresql-contrib
+sudo apt-get install -y postgresql libpq-dev
+	# Setup user for Postgresql
+sudo -u postgres createuser $USER -s
+sudo -u postgres psql --command "\\password $USER"
+
+# Setup ssh
+ssh-keygen -t rsa -C $email << EOF
+
+
+
+EOF
+ssh-add ~/.ssh/id_rsa
+
 # Install Dependency
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
 # Install Ruby
@@ -15,7 +36,6 @@ echo 'Installing Ruby version with 2.2.3'
 version=2.2.3
 rvm install $version
 rvm use $version --default
-ruby -v
 
 	# Setup Gemfile
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
@@ -23,30 +43,18 @@ gem install bundler
 
 
 # Setup Git
-echo -n "Your Name: "
-read username
-echo -n "Your Email: "
-read email
 git config --global color.ui true
 git config --global user.name $username
 git config --global user.email $email
-ssh-keygen -t rsa -C $email
+
 
 # Install Rails
 	# Install Node JS dependency
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y nodejs
 
 	# Install Rails
 gem install rails
-
-# Install Postgresql
-sudo apt-get update
-sudo apt-get install -y postgresql-common postgresql-contrib
-sudo apt-get install -y postgresql libpq-dev
-	# Setup user for Postgresql
-sudo -u postgres createuser $USER -s
-sudo -u postgres psql --command "\\password $USER"
 
 # Done
 source ~/.bashrc
