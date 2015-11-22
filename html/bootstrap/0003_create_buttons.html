@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="test page" />
+		<meta name="author"      content="author.name" />
+
+		<title>Bootstrap - Create Buttons</title>
+
+		<link rel='stylesheet' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Stylesheet to keep the demo into single file. You should change it into separate CSS later  -->
+		<style>
+			html, body {
+				height: 100%;
+			}
+			header {
+				background-color: #1dd1ae;
+			}
+			.content {
+				min-height: 100%;
+				margin-bottom: -150px;
+			}
+			footer, .footer-spacing {
+				height: 150px;
+			}
+			footer {
+				background-color: #e67e22;
+			}
+		</style>
+
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Script to keep the demo into single file. You should change it into separate js script later  -->
+		<script>
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<header>
+				<div class="container">
+					<div class="title">
+						<h1>This is a Header Structure inside the body.</h1>
+					</div>
+					<div class="sub-title">
+						<p>It is being used to contain navbar, visible 'title' like the one above etc.</p>
+						<p>The area is covered as green.</p>
+					</div>
+				</div>
+			</header>
+			<main class="container">
+				<h2>This is the body contents</h2>
+				<p>The area is cover as white.</p>
+				<hr>
+				<div class="container">
+					<h3>Creating all kinds of buttons</h3>
+					<p>Bootstrap uses CSS classes to style buttons, regardless of tags shown in examples below. the '.btn' class is setting up button outline and shapes.</p>
+					<p>As for colors, it comes with 5 standard types:</p>
+					<ol>
+						<li> default = white with outline </li>
+						<li> primary = blue </li>
+						<li> success = green </li>
+						<li> warning = yellow </li>
+						<li> danger = red </li>
+					</ol>
+				</div>
+				<hr>
+				<div class="container">
+					<p class="btn btn-default">Hello World. I'm the default button.</p>
+					<a href="#" class="btn btn-primary">I'm the primary button!</a>
+					<h4 class="btn btn-success">This is the success button!</h4>
+					<span class="btn btn-warning">This is the warning button!</span>
+					<div class="btn btn-danger">This is a danger button!</div>
+				</div>
+				<hr>
+			</main>
+			<div class="footer-spacing"></div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<h2>This is the footer</h2>
+				<p>It is contained inside footer.</p>
+				<p>The area is cover as orange</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="test page" />
+		<meta name="author"      content="author.name" />
+
+		<title>Bootstrap - Making Footer Sticky</title>
+
+		<link rel='stylesheet' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Stylesheet to keep the demo into single file. You should change it into separate CSS later  -->
+		<style>
+			html, body {
+				height: 100%;						/* Set the page to 100% height */
+			}
+			header {
+				background-color: #1dd1ae;
+			}
+			.content {
+				min-height: 100%;					/* Set the content to 100% height at minimum */
+				background-color: #3498db;
+				margin-bottom: -150px;				/* Set the content margin bottom to the footer's minimum height */
+			}
+			footer, .footer-spacing {
+				height: 150px;						/* Set both footer and footer-spacing height to a fix height value */
+			}
+			footer {
+				background-color: #e67e22;
+			}
+		</style>
+
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Script to keep the demo into single file. You should change it into separate js script later  -->
+		<script>
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<header>
+				<div class="container">
+					<div class="title">
+						<h1>This is a Header Structure inside the body.</h1>
+					</div>
+					<div class="sub-title">
+						<p>It is being used to contain navbar, visible 'title' like the one above etc.</p>
+						<p>The area is covered as green.</p>
+					</div>
+				</div>
+			</header>
+			<main class="container">
+				<h2>This is the body contents</h2>
+				<p>Take a look how the contents are being organized here.</p>
+				<p>The area is cover as blue.</p>
+				<hr>
+				<h3>To Push the footer to the bottom, you'll need some margin-bottom or you can an an empty div containing the margin-bottom.</h3>
+				<h3>Ensures that the height of the footer is the same as the margin-bottom.</h3>
+				<hr>
+			</main>
+			<div class="footer-spacing"></div>	<!-- Adding a spacing to create sufficient spacing for the footer -->
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<h2>This is the footer</h2>
+				<p>It is contained inside footer.</p>
+				<p>The area is cover as orange</p>
+			</div>
+		</footer>
+	</body>
+</html>
