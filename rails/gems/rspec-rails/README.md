@@ -51,6 +51,12 @@ $ guard init puma
 7) Commit your changes. Your TTD rails framework is ready.
 
 
+8) For establishing the server, you can now use 'guard' instead of 'rails s'. Guard will handles the test execution and server restart from time to time.
+```
+$ guard
+```
+
+
 # References
 1. https://github.com/jc00ke/guard-puma
 2. https://github.com/rspec/rspec-rails
