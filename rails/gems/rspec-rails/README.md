@@ -1,4 +1,5 @@
-# Rails New with Rspec Porting
+# Setup
+## Rails New with Rspec Porting
 This guide is created to set up TTD gems when rails are created. The porting includes:
 
 1. CoffeeScript removal
@@ -9,7 +10,7 @@ This guide is created to set up TTD gems when rails are created. The porting inc
 6. Guard-Puma inclusion
 
 
-# Steps
+### Steps
 1) Create a rails new app.
 ```
 $ rails new <app_name> --database=postgresql
@@ -55,6 +56,24 @@ $ guard init puma
 ```
 $ guard
 ```
+
+
+
+# Using Rspec Rails
+## Automatic Creation
+Once rspec rails setup is done, each rails generators will create a spec test script instead of the common unit test script.
+
+
+## Manual Creation
+1) To generate a rspec test script manually:
+```
+$ rails g rspec:TYPE
+
+e.g:
+
+$ rails g rspec:model
+```
+
 
 
 # References
