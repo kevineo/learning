@@ -16,8 +16,10 @@ $ gem 'simplify'
 > You must export environment variable with your keys.
 >
 >
-> Example: 
+> Example:
+>
 > $ export simplify_commerce_public_key=YOUR_PUBLIC_KEY
+>
 > $ export simplify_commerce_private_key=YOUR_PRIVATE_KEY
 >
 >
