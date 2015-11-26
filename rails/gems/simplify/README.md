@@ -12,6 +12,16 @@ $ gem 'simplify'
 
 4) Source code: https://github.com/hollowaykeanho/simplify-commerce-demo
 
+> **NOTE**:
+> You must export environment variable with your keys.
+>
+>
+> Example: 
+> $ export simplify_commerce_public_key=YOUR_PUBLIC_KEY
+> $ export simplify_commerce_private_key=YOUR_PRIVATE_KEY
+>
+>
+> Alternatively, you can also deploy config/application.yml file since Figaro gem is included by default.
 
 
 # References
