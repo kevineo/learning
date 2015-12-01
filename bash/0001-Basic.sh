@@ -13,6 +13,9 @@ echo ""
 STR="Variable: Hello World"
 	# print the variables
 echo $STR
+	# Concatenate variables with string
+echo "Concatenate: $STR"
+echo "Concatenate: "$STR
 
 	# Store output from an execution.
 		# ( ) bracquet is for running
