@@ -148,4 +148,9 @@ echo ""
 alias command="A Binary path for execution"
 
 
+echo ""
+# Generate random alphanumeric string
+echo $(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+
+
 echo "End of file"
