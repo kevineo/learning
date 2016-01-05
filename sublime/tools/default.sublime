@@ -1,9 +1,13 @@
-// Add these to your user preferences
-
-
-	// Set to true to removing trailing white space on save
-	"trim_trailing_white_space_on_save": true,
-
-	// Exit Completely without remembering. Thus, opening fresh session
+{
+	"font_size": 9,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+	],
 	"remember_open_files": false,
-	"hot_exit": false
+	"detect_indentation": true,
+	"translate_tabs_to_spaces": false,
+	"tab_size": 2,
+	"trim_trailing_white_space_on_save": true
+}
+
