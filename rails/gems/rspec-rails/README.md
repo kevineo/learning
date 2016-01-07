@@ -124,3 +124,6 @@ $ rails g rspec:model
 4. https://github.com/thoughtbot/shoulda-matchers#configuration
 5. https://github.com/thoughtbot/factory_girl_rails
 6. https://github.com/beatrichartz/shoulda-callback-matchers
+7. https://gist.github.com/kyletcarlson/6234923
+8. https://gist.github.com/eliotsykes/5b71277b0813fbc0df56
+9. http://ricostacruz.com/cheatsheets/rspec-rails.html
