@@ -111,7 +111,7 @@ $ git push origin master:dev/feature/user
 <br><br>
 
 
-5) Checkout your development branch using git checkout.
+5) Switch to your development branch using git checkout.
 ```
 $ git checkout dev/feature/user
 ```
