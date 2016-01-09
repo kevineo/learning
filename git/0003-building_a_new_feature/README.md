@@ -194,7 +194,7 @@ $ git commit -m "Added new files"
 >
 > The actual command is:
 > ```
-> $ git commit <option> <data if any>
+> $ git commit <option> <messages for -m case>
 > ```
 >
 > <br>
@@ -206,7 +206,7 @@ $ git commit -m "Added new files"
 >
 > "-a" stands for all. This will add everything.
 > <br><br>
-> Both '-s' and '-a' doesn't need additional data.
+> Both '-s' and '-a' doesn't need additional messages parameters.
 > However, they'll bring up an editor interface, usually in vim editor for the user to write their messages.
 > If you aren't familar with vim terminal, then use -m.
 >
@@ -360,6 +360,7 @@ Please read **important note** for this section.
 <br><br>
 
 > **Important Note**:
+>
 > As a good practice and a line of defense against copyright infringement among developers, you ***shouldn't*** introduce a new line of code when resolving a merge conflict.
 >
 > Merge process is only about selecting code block or merge 2 blocks of code without a new line of changes.
