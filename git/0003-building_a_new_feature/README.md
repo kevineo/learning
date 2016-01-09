@@ -29,7 +29,7 @@ $ cd /PATH/TO/APP_NAME
 <br><br>
 
 
-2) Check the status of the current local repository using git status. Ensures you're on master branch.
+2) Check the status of the current local repository using git status. Ensures you're on the master branch.
 ```
 $ git status
 On branch master
@@ -42,7 +42,8 @@ $
 
 
 > NOTE:
-> Git status is life-saving command to check the status and health of a repository.
+>
+> Git status is a life-saving command to check the status and health of a repository.
 >
 > It reports which branch you're in, what status you're at, changes in files and next action if any.
 
@@ -50,7 +51,7 @@ $
 <br><br>
 
 
-3) Git pull for getting the latest update from master branch. Ensures you'll see up-to-date reporting.
+3) Git pull for getting the latest update from the master branch. Ensures you'll see up-to-date reporting.
 ```
 $ git pull
 Already up-to-date.
@@ -77,6 +78,7 @@ $ git push origin master:dev/feature/user
 ```
 
 > NOTE:
+>
 > The actual command is:
 > ```
 > $ git push <alias> <local branch name>:<remote branch name>
@@ -94,10 +96,15 @@ $ git push origin master:dev/feature/user
 >
 > <br><br>
 > Some common name for remote branch:
+>
 > dev/**    - stands for development branch.
+>
 > rel/**    - stands for release branch.
+>
 > fixes/**  - stands for bug fixes branch.
+>
 > test/**   - stands for test branch.
+>
 > staging   - stands for staging branch (a mirror of master branch for continous integration)
 
 
@@ -110,15 +117,17 @@ $ git checkout dev/feature/user
 ```
 
 > NOTE:
+>
 > The actual command is:
 > ```
 > $ git checkout <branch name>
 > ```
 >
-> The command uses the given branch name to scan your for any local branch and switch to it.
+> The command uses the given branch name to scan for any local branch and switch to it.
 > If no such local branch exists, it will look for remote branch and create one for you.
 >
-> A golden rule for a good software development is never development things on master branch.
+> A golden rule for a good software development is never development things on the master branch.
+>
 > Master branch is the soul for your software and customer is using it. You wouldn't want customers
 > to complain about your software if you made one wrong mistake when you develop on your master branch.
 
@@ -132,7 +141,9 @@ $ git add .
 ```
 
 > Note:
+>
 > You may begin your development in your branch. Once done, git add command is being used.
+>
 > The actual command is:
 >
 > ```
@@ -166,11 +177,13 @@ $ git reset 0003-building_a_new_feature/README.md
 ```
 
 > Note:
+>
 > The actual command is:
 > ```
 > $ git reset <FILENAME>
 > ```
 
+<br><br>
 
 Otherwise, you can use git commit to create a change commit.
 ```
@@ -178,32 +191,44 @@ $ git commit -m "Added new files"
 ```
 
 > Note:
+>
 > The actual command is:
 > ```
 > $ git commit <option> <data if any>
 > ```
 >
+> <br>
 > You can read more about option here: https://git-scm.com/docs/git-commit
 >
-> -m stands for short messages. For tutorial simplicity, we'll guide you use -m, even we encourage -s.
-> -s stands for signature. This will append a signed-off with your name and contact for a commit.
-> -a stands for all. This will add everything.
+> "-m" stands for short messages. For tutorial simplicity, we'll guide you use -m, even we encourage -s.
 >
+> "-s" stands for signature. This will append a signed-off with your name and contact for a commit.
+>
+> "-a" stands for all. This will add everything.
+> <br><br>
 > Both '-s' and '-a' doesn't need additional data.
-> However, they'll bring up an editor interface, usually in vim editor for user to write their messages.
+> However, they'll bring up an editor interface, usually in vim editor for the user to write their messages.
 > If you aren't familar with vim terminal, then use -m.
 >
-> If you're experienced with source code management, it's best to use -s to hold responsibility over your
-> code changes.
+> ---------
+> If you're experienced with source code management, it's best to use -s to hold responsibility for your
+> code changes. Be proud of your code!
 >
+> ---------
 > Try to commit small and commit often. By small, it means one commit for one purpose.
-> If you happens to write a message like:
+>
+> If you happen to write a message like:
+> ```
 > "Added feature A and fixed bug #1231231"
+> ```
 >
 > That means it is a large commit due to 2 purposes. By right it should be:
+>
 > Commit 1: Added feature A
+>
 > Commit 2: Fixed bug #1231231
 >
+> <br>
 > Small commits allow easier recovery management and cleaner historical tracking.
 
 
@@ -238,8 +263,9 @@ $
 $ git pull origin master
 ```
 
-> NOTE: 
-> By this command, you will be pulled into a terminal prompts saying "merge 'master' from URL."
+> NOTE:
+>
+> By this command, you will be pulled into a terminal prompt saying "merge 'master' from URL."
 > This means that there is no conflict. Commit that change.
 
 
@@ -300,7 +326,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 
 
-13) Following step (12), resolve all conflict by selecting the code. Select the code block without much modifications.
+13) Following step (12), resolve all conflict by selecting the code. Select the code block without many modifications.
 Please read **important note** for this section.
 ```
 >>>>>>> 6c02f6fd67369d5233d7390bf5ec8a4cd46f540d
@@ -317,38 +343,56 @@ Please read **important note** for this section.
 ```
 
 > NOTE:
-> conflict occurs when there is a drastic changes in certain line of code until git doesn't know how to select which block of codes.
+>
+> Conflict occurs when there is a drastic changes in certain line of code until git doesn't know how to select which block of codes.
+>
 > Your job is to help git to select and merge the code blocks without introducing new line of code.
+>
 > Your conflicted code block is presented as:
 > ```
 > >>>>>>> <commit id that is being merged from external>
->  <code block from the external branch>
+>       <code block from the external branch>
 > <<<<<<< <HEAD commit from your branch>
->  <code block from your branch>
+>       <code block from your branch>
 > ======= <end of conflicted code merge>
 > ```
 
 <br><br>
 
 > **Important Note**:
-> As a good practice and a line of defense against copyright infringement among developers, you ***shouldn't*** introduce new line of code when resolving a merge conflict.
-> Merge process is only about selecting code block or merge 2 blocks of code without new line of changes.
-> <br><br>
-> Usually, there are 4 common cases:
-> 1. Your local code block supposed to override remote code block
-> 2. Remote code block supposed to override your local code block
-> 3. Your local code block is mergable with remote code block without code removal from each side. 
-> 4. Either code blocks needs to be alter in order to have a successful commit.
-> <br><br>
-> The common action plan for each cases are:
-> 1. For case #1, select your local code block and delete remote code block.
-> 2. For case #2, select remote code block and delete your local code block.
-> 3. For case #3, merge them.
-> 4. For case #4, select the remote code and discard your local code block. Then, after the merge conflict is commited, create a new commit that introduces your changes on top of it.
+> As a good practice and a line of defense against copyright infringement among developers, you ***shouldn't*** introduce a new line of code when resolving a merge conflict.
+>
+> Merge process is only about selecting code block or merge 2 blocks of code without a new line of changes.
+>
 > <br>
-> For case #4, if you found a bug from the remote code block, raise it as a bug and should be tracked somewhere else.
+> -----------
+> Usually, there are 4 common cases:
+>
+> 1. Your local code block supposed to override remote code block
+>
+> 2. Remote code block supposed to override your local code block
+>
+> 3. Your local code block is mergable with remote code block without code removal from each side.
+>
+> 4. Either code blocks need to be altered in order to have a successful commit.
+>
 > <br><br>
-> Golden Rule: **NEVER** alter codes commited by someone else since git merge tracks you as an author for merging and solving conflict.
+> The common action for each cases are:
+>
+> 1. For case #1, select your local code block and delete remote code block.
+>
+> 2. For case #2, select remote code block and delete your local code block.
+>
+> 3. For case #3, merge them.
+>
+> 4. For case #4, select the remote code and discard your local code block. Then, after the merge conflict is commited, create a new commit that introduces your changes on top of it.
+>
+>
+> For case #4, if you found a bug from the remote code block, raise it as a bug and should be tracked somewhere else.
+>
+> <br><br>
+>
+> Golden Rule: **NEVER** alter codes commited by someone else since git merge tracks you as an author for merging and solving conflicts.
 
 
 <br><br>
@@ -408,15 +452,14 @@ $ git push
 <br><br>
 
 
-19) If the review session requires you to do more changes, got to step (5). Pass this step if the review goes successful and branch is merged.
+19) If the review session requires you to do more changes, got to step (5). Pass this step if the review goes successful and the branch is merged.
 
 <br><br>
 
 
-20) Check out your master branch and perform a new pull. Congrats! Your codes has been merge successfully. Restart at (1) for any new development.
+20) Check out your master branch and perform a new pull. Congrats! Your codes have merged successfully. Restart from Step (1) for any new development.
 ```
 $ git checkout master
 $ git pull
 ```
-
 
