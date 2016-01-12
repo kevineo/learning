@@ -48,6 +48,16 @@ group :development, :test do
 	gem 'shoulda-matchers'
 	gem 'factory_girl_rails'
 	gem 'shoulda-callback-matchers'
+
+	# For developer's code improvements
+	gem 'colored'
+	gem 'traceroute'
+	gem 'rails_best_practices'
+	gem 'rubocop'
+	gem 'rubycritic'
+	gem 'brakeman'
+	gem 'bullet'
+	gem 'rack-mini-profiler'
 end
 ```
 
@@ -62,7 +72,18 @@ $ bundle install
 
 <br><br>
 
-6) Initialize Guard and Rspec
+6) Initialize Bullet by adding the following inside ***config/environments/development.rb***:
+```
+	config.after_initialize do
+		Bullet.enable = true
+		Bullet.alert = true
+	end
+```
+
+
+<br><br>
+
+7) Initialize Guard and Rspec
 ```
 $ rails generate rspec:install
 $ guard init rspec
@@ -72,7 +93,7 @@ $ guard init puma
 
 <br><br>
 
-7) Setup shoulda-matchers by pasting the following codes into the spec/rails_helper.rb:
+8) Setup shoulda-matchers by pasting the following codes into the spec/rails_helper.rb:
 ```
 Shoulda::Matchers.configure do |config|
 	config.integrate do |with|
@@ -85,12 +106,12 @@ end
 
 <br><br>
 
-8) Commit your changes. Your TTD rails framework is ready.
+9) Commit your changes. Your TTD rails framework is ready.
 
 
 <br><br>
 
-9) For establishing the server, you can now use 'guard' instead of 'rails s'. Guard will handles the test execution and server restart from time to time.
+10) For establishing the server, you can now use 'guard' instead of 'rails s'. Guard will handles the test execution and server restart from time to time.
 ```
 $ guard
 ```
@@ -127,3 +148,10 @@ $ rails g rspec:model
 7. https://gist.github.com/kyletcarlson/6234923
 8. https://gist.github.com/eliotsykes/5b71277b0813fbc0df56
 9. http://ricostacruz.com/cheatsheets/rspec-rails.html
+10. https://github.com/flyerhzm/bullet
+11. https://github.com/whitesmith/rubycritic
+12. https://github.com/amatsuda/traceroute
+13. https://github.com/presidentbeef/brakeman
+14. https://github.com/railsbp/rails_best_practices
+15. https://github.com/bbatsov/rubocop#cops
+16. https://github.com/MiniProfiler/rack-mini-profiler
