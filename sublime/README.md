@@ -7,3 +7,6 @@ Courtesy from NextAcademy. Sublime editor is the primary editor for my workspace
 2. Go to the script folder.
 3. In terminal, perform ```$ chmod +x ubuntu-sublime.sh```.
 4. In terminal, run the script with ```$ ./ubuntu-sublime.sh```.
+
+## Goodies Installation
+1. Go to tools/default.sublime. These are the settings I used for coding.
