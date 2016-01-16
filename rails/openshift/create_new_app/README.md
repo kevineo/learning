@@ -7,6 +7,7 @@ It is including rspec-rails setup for test-driven development.
 
 # Assumptions
 By the time you're reading this guide, I assume you know the followings:
+
 1. Ruby 2.0.0
 2. [Generating New Rails App](https://github.com/hollowaykeanho/learning/tree/master/rails/gems/rspec-rails)
 3. Experience in setting up Rails into external services like Heroku
@@ -25,6 +26,7 @@ Hence, you'll need to use  some old convention in order to make thing works.
 
 <br>
 These are the major changes:
+
 1) Use old hash syntax instead of the new version:
 ```
 # group: :doc
@@ -55,7 +57,7 @@ $ rhc setup -l name@email.com
 >
 > Assume your local machine has rhc setup and logged in via terminal.
 
-
+<br>
 1) Go ahead and create a rails app using [rspec-rails guide](https://github.com/hollowaykeanho/learning/tree/master/rails/gems/rspec-rails).
 
 <br><br>
@@ -69,7 +71,6 @@ Change the modern hashes:
 gem 'sdoc', '~> 0.4.0', group: :doc
 ```
 
-<br>
 Add:
 ```
 group :doc do
@@ -203,7 +204,7 @@ run Rails.application
 
 
 9) If a new folder named as the app name exist inside your rails app, delete it.
-By right you should only face config.ru conflict only.
+By right you should only be facing config.ru conflict only.
 
 
 <br><br>
