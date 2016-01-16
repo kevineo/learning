@@ -400,15 +400,70 @@ Connecting to 24524yehehserhserhesrh@sniffy-parallax.rhcloud.com ...
 
 [sniffy-parallax.rhcloud.com 24524yehehserhserhesrh]\> cd app-root/repo
 [sniffy-parallax.rhcloud.com 24524yehehserhserhesrh]\> bundle exec rake db:setup RAILS_ENV=production
-[sniffy-parallax.rhcloud.com 24524yehehserhserhesrh]\>
+[sniffy-parallax.rhcloud.com 24524yehehserhserhesrh]\> exit
+$
 ```
 
 
 <br><br>
 
 
-20) Visit your app website. The app is ready for further development.
+21) Set the app to use puma as primary server using rhc environment variable settings:
+```
+$ rhc env set OPENSHIFT_RUBY_SERVER=puma -a sniffy
+RSA 1024 bit CA certificates are loaded due to old openssl compatibility
+Setting environment variable(s) ... done
+$
+```
 
+> Note:
+>
+> The actual command is:
+> ```
+> rhc env set OPENSHIFT_RUBY_SERVER=puma -a <app_name>
+> ```
+
+
+<br><br>
+
+
+
+22) Restart your app using rhc restart.
+```
+$ rhc app restart sniffy
+RSA 1024 bit CA certificates are loaded due to old openssl compatibility
+RESULT:
+sniffy restarted
+$
+```
+
+> Note:
+>
+> The actual command is:
+> ```
+> rhc app restart <app_name>
+> ```
+
+
+
+<br><br>
+
+
+
+
+23) Visit your app website. The app is ready for further development.
+
+
+
+<br><br>
+
+
+
+24) **Optional**: For better ruby version compatibility, you're advisable to add
+the following into your Gemfile:
+```
+ruby '2.0.0'
+```
 
 # References
 1. http://www.sitepoint.com/deploy-your-rails-to-openshift/
