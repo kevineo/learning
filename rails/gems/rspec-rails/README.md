@@ -69,10 +69,10 @@ $ bundle install
 6) Initialize Bullet by adding the following inside
 ***config/environments/development.rb***:
 ```
-	config.after_initialize do
-		Bullet.enable = true
-		Bullet.alert = true
-	end
+config.after_initialize do
+	Bullet.enable = true
+	Bullet.alert = true
+end
 ```
 
 
@@ -137,15 +137,16 @@ $ rails g rspec:model
 <br><br>
 # Other optimization gems:
 You can install the following gems separately for optimization purposes.
+You don't have to include them inside your gemfile.
 Example:
 ```
-	gem 'colored'
-	gem 'traceroute'								# trace unused routes
-	gem 'rails_best_practices'			# scan codes for best practices
-	gem 'rubocop'										# scan codes for best practices
-	gem 'rubycritic'								# scan codes for best practices
-	gem 'brakeman'									# scan app for security
-	gem 'rack-mini-profiler'				#	profile and benchmark app
+gem 'colored'
+gem 'traceroute'				# trace unused routes
+gem 'rails_best_practices'			# scan codes for best practices
+gem 'rubocop'					# scan codes for best practices
+gem 'rubycritic'				# scan codes for best practices
+gem 'brakeman'					# scan app for security
+gem 'rack-mini-profiler'			# profile and benchmark app
 ```
 
 # References
