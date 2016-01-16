@@ -1,6 +1,7 @@
 # Setup
 ## Rails New with Rspec Porting
-This guide is created to set up TTD gems when rails are created. The porting includes:
+This guide is created to set up TTD gems when rails are created.
+The porting includes:
 
 1. CoffeeScript removal
 2. Guard gem inclusion
@@ -50,14 +51,7 @@ group :development, :test do
 	gem 'shoulda-callback-matchers'
 
 	# For developer's code improvements
-	gem 'colored'
-	gem 'traceroute'
-	gem 'rails_best_practices'
-	gem 'rubocop'
-	gem 'rubycritic'
-	gem 'brakeman'
 	gem 'bullet'
-	gem 'rack-mini-profiler'
 end
 ```
 
@@ -72,7 +66,8 @@ $ bundle install
 
 <br><br>
 
-6) Initialize Bullet by adding the following inside ***config/environments/development.rb***:
+6) Initialize Bullet by adding the following inside
+***config/environments/development.rb***:
 ```
 	config.after_initialize do
 		Bullet.enable = true
@@ -93,7 +88,8 @@ $ guard init puma
 
 <br><br>
 
-8) Setup shoulda-matchers by pasting the following codes into the spec/rails_helper.rb:
+8) Setup shoulda-matchers by pasting the following codes into the
+spec/rails_helper.rb, after the last config 'end' syntax:
 ```
 Shoulda::Matchers.configure do |config|
 	config.integrate do |with|
@@ -111,7 +107,8 @@ end
 
 <br><br>
 
-10) For establishing the server, you can now use 'guard' instead of 'rails s'. Guard will handles the test execution and server restart from time to time.
+10) For establishing the server, you can now use 'guard' instead of 'rails s'.
+Guard will handles the test execution and server restart from time to time.
 ```
 $ guard
 ```
@@ -121,7 +118,8 @@ $ guard
 
 # Using Rspec Rails
 ## Automatic Creation
-Once rspec rails setup is done, each rails generators will create a spec test script instead of the common unit test script.
+Once rspec rails setup is done, each rails generators will create a spec test
+script instead of the common unit test script.
 
 
 <br><br>
@@ -136,7 +134,19 @@ e.g:
 $ rails g rspec:model
 ```
 
-
+<br><br>
+# Other optimization gems:
+You can install the following gems separately for optimization purposes.
+Example:
+```
+	gem 'colored'
+	gem 'traceroute'								# trace unused routes
+	gem 'rails_best_practices'			# scan codes for best practices
+	gem 'rubocop'										# scan codes for best practices
+	gem 'rubycritic'								# scan codes for best practices
+	gem 'brakeman'									# scan app for security
+	gem 'rack-mini-profiler'				#	profile and benchmark app
+```
 
 # References
 1. https://github.com/jc00ke/guard-puma
