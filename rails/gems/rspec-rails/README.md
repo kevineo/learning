@@ -12,7 +12,21 @@ The porting includes:
 7. Shoulda-matcher inclusion
 8. Shoulda-callback-matcher inclusion
 9. Factorygirl inclusion
+10. Capybara inclusion
+11. Selenium inclusion
 
+
+<br><br>
+
+### Local Setup
+If you're on Linux, you'll need to install these packages for Selenium driver.
+```
+$ sudo apt-get install firefox xvfb libqtwebkit-dev x11-xkb-utils -y
+$ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic -y
+```
+
+
+<br><br>
 
 ### Steps
 1) Create a rails new app.
@@ -23,13 +37,13 @@ $ rails new <app_name> --database=postgresql
 
 <br><br>
 
-2) Scrub the Gemfile comments.
+2) ***Optional***: Scrub the Gemfile comments.
 
 
 <br><br>
 
 
-3) Remove the CoffeeScript gem.
+3) ***Optional***: Remove the CoffeeScript gem if you prefer javascript.
 
 
 <br><br>
@@ -40,18 +54,21 @@ $ rails new <app_name> --database=postgresql
 gem 'puma'
 
 group :development, :test do
-	gem 'byebug'
-	gem 'guard'
-	gem 'guard-rspec'
-	gem 'guard-puma'
-	gem 'rspec'
-	gem 'rspec-rails'
-	gem 'shoulda-matchers'
-	gem 'factory_girl_rails'
-	gem 'shoulda-callback-matchers'
+  gem 'byebug'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-puma'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'shoulda-callback-matchers'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'capybara-webkit'
 
-	# For developer's code improvements
-	gem 'bullet'
+  # For developer's code improvements
+  gem 'bullet'
 end
 ```
 
@@ -70,15 +87,15 @@ $ bundle install
 ***config/environments/development.rb***:
 ```
 config.after_initialize do
-	Bullet.enable = true
-	Bullet.alert = true
+  Bullet.enable = true
+  Bullet.alert = true
 end
 ```
 
 
 <br><br>
 
-7) Initialize Guard and Rspec
+7) Initialize Guard and Rspec:
 ```
 $ rails generate rspec:install
 $ guard init rspec
@@ -92,22 +109,32 @@ $ guard init puma
 spec/rails_helper.rb, after the last config 'end' syntax:
 ```
 Shoulda::Matchers.configure do |config|
-	config.integrate do |with|
-		with.test_framework :rspec
-		with.library :rails
-	end
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
 ```
 
 
 <br><br>
 
-9) Commit your changes. Your TTD rails framework is ready.
+9) Initialize Capybara by adding the following codes into the
+**spec/rails_helper.rb**, at the top with the group of gems 'requires':
+```
+require 'capybara/rails'
+```
 
 
 <br><br>
 
-10) For establishing the server, you can now use 'guard' instead of 'rails s'.
+
+10) Commit your changes. Your TTD rails framework is ready.
+
+
+<br><br>
+
+11) For establishing the server, you can now use 'guard' instead of 'rails s'.
 Guard will handles the test execution and server restart from time to time.
 ```
 $ guard
@@ -141,12 +168,12 @@ You don't have to include them inside your gemfile.
 Example:
 ```
 gem 'colored'
-gem 'traceroute'				# trace unused routes
-gem 'rails_best_practices'			# scan codes for best practices
-gem 'rubocop'					# scan codes for best practices
-gem 'rubycritic'				# scan codes for best practices
-gem 'brakeman'					# scan app for security
-gem 'rack-mini-profiler'			# profile and benchmark app
+gem 'traceroute'        # trace unused routes
+gem 'rails_best_practices'      # scan codes for best practices
+gem 'rubocop'         # scan codes for best practices
+gem 'rubycritic'        # scan codes for best practices
+gem 'brakeman'          # scan app for security
+gem 'rack-mini-profiler'      # profile and benchmark app
 ```
 
 # References
@@ -166,3 +193,5 @@ gem 'rack-mini-profiler'			# profile and benchmark app
 14. https://github.com/railsbp/rails_best_practices
 15. https://github.com/bbatsov/rubocop#cops
 16. https://github.com/MiniProfiler/rack-mini-profiler
+17. http://joanswork.com/rubocop-rails-getting-started/
+18. https://houndci.com/configuration
