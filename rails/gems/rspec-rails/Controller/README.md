@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+```class UsersController < ApplicationController
 
   def new
     @user = User.new
@@ -23,11 +23,11 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :email, :avatar)
     end
-end
+end```
 
 ---------------------------
 
-require 'rails_helper'
+```require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
@@ -101,4 +101,4 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-end
+end```
