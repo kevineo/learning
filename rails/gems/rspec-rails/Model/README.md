@@ -1,4 +1,5 @@
-```# == Schema Information
+```
+# == Schema Information
 #
 # Table name: users
 #
@@ -19,11 +20,13 @@ class User < ActiveRecord::Base
   def eat(food)
     @eating = "#{self.username} is eating #{food}."
   end
-end```
+end
+```
 
 ---------------------------------
 
-```require 'rails_helper'
+```
+require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
