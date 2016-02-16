@@ -1,11 +1,12 @@
 # Rails Setup Bash Script
 This folder is created for automating Ruby on Rails installation.
 
-Version 0.5.0
+Version 0.5.1
 
 # Current support:
 | OS                                         | Version  |     Status     |
 |:-------------------------------------------|:--------:|:--------------:|
+| Mac OSX - El Capitan                       |  0.5.1   | tested working |
 | Xubuntu 14.04 64-bit                       |  0.5.0   | tested working |
 | Xubuntu 14.10 32-bit                       |  0.5.0   | tested working |
 | Mac OSX - Yosmite                          |  0.5.0   | tested working |
@@ -14,14 +15,26 @@ Version 0.5.0
 | Raspberry Pi Ubuntu Mate 15.04 64-bit      |  0.5.0   | tested working |
 
 # To start
-1. Download the correct script.
-2. Go to the downloaded folder and find that script. Then, perform the following command:
+1) Download the correct script. Right click and save the script.
+
+Ubuntu or Xubuntu - [Here](https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/ubuntu/rails_setup_deb.sh)
+
+<br>
+MAC OSX - [Here](https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/mac/rails_setup_osx.sh)
+
+
+<br><br>
+
+2) Go to the downloaded folder and find that script. Then, perform the following command:
+
 	```bash
 	$ chmod +x script_name.sh
-	
-	$ sh script_name.sh 
+	$ sh script_name.sh
 	```
-3. The automated installation will start immediately. Please watch and stay tuned for the prompted inputs from time to time.
+
+<br><br>
+
+3) The follow the automation instruction. Please watch and stay tuned for the prompted inputs from time to time.
 
 
 # References
