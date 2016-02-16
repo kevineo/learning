@@ -27,7 +27,7 @@ MAC OSX - [Here](https://raw.githubusercontent.com/hollowaykeanho/learning/maste
 
 2) Go to the downloaded folder and find that script. Then, perform the following command:
 
-	```bash
+	```
 	$ chmod +x script_name.sh
 	$ sh script_name.sh
 	```
