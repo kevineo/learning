@@ -1,6 +1,12 @@
 # NOTICE
 # This script is meant for auto-run. If you want to learn, please learn BASH script. Thank you.
 
+function xcode_agreement {
+	echo "== Setup Xcode Agreement =="
+	sudo xcodebuild -license
+	echo "[ COMPLETED ]"
+}
+
 
 function install_homebrew {
 	echo "== Installing Homebrew =="
@@ -15,6 +21,7 @@ function install_rbenv {
 	# Add rbenv to bash so that it loads every time you open a terminal
 	echo -n 'adding rbenv to bash_profile for autoloading... '
 	echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+	echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
 	source ~/.bash_profile
 	echo '[ DONE ]'
 	echo ''
@@ -44,10 +51,7 @@ function install_git {
 	echo '== Installing GIT =='
 
 	# Installation Notice
-	echo "Go to GIT official webpage "
-	echo "Press ENTER to continue after the installation"
-	read temp
-	echo ""
+	brew install git
 
 	# Process name
 	echo -n "Processing input for setup... "
@@ -116,17 +120,34 @@ function setup_postgresql {
 ################################
 # Driver Code
 ################################
+# Welcome Printout
+echo "==================================="
+echo " Welcome to Rails Automation Tool  "
+echo " brought to you by:                "
+echo " hollowaykeanho@gmail.com          "
+echo "==================================="
+echo ""
+
 # Inquire input
-echo -n "Your Name: "
+echo "-----------------------------------"
+echo "| Inquire Input                   |"
+echo "-----------------------------------"
+echo ""
+
+echo -n "Your Name For Github Signature: "
 read user_username
-echo -n "Your Email: "
+echo -n "Your Email For Github Signature: "
 read user_email
 
 # Inquire Ruby Version to be installed
-OPTIONS="2.2.3"
-echo "Please select your ruby version option. "
+OPTIONS="2.2.3 2.2.4"
+echo "Please select your desired ruby version option. "
 select opt in $OPTIONS; do
 	case $opt in
+		"2.2.4")
+			ruby_version=2.2.4
+			break
+			;;
 		"2.2.3")
 			ruby_version=2.2.3
 			break
@@ -137,12 +158,41 @@ select opt in $OPTIONS; do
 	esac
 done
 
-# Installation Automation
+OPTIONS="YES NO"
+echo "Have you install XCode from Apple Store and AGREED TO LICENSE?"
+select opt in $OPTIONS; do
+	case $opt in
+		"YES")
+			echo "good."
+			break
+			;;
+		"NO")
+			echo "automation will not work without xcode."
+			echo "please go to app store and install Xcode now."
+			xcode_agreement
+			break
+			;;
+		*)
+			echo "select option: invalid Option."
+	esac
+done
+
+# Install Brew to ensure it's working
+echo "-----------------------------------"
+echo "| Setup Interatives softwares     |"
+echo "-----------------------------------"
+echo ""
 install_homebrew
+setup_ssh $user_email
+
+echo "==================================================="
+echo "Inquiry completed. Press Enter to begin automation."
+echo "==================================================="
+read temp
+
 install_rbenv
 install_ruby $ruby_version
 install_git $user_username $user_email
-setup_ssh $user_email
 setup_rails
 setup_postgresql
 
