@@ -64,6 +64,7 @@ function install_git {
 	git config --global color.ui true
 	git config --global user.name $username
 	git config --global user.email $email
+	git config --global push.default matching
 	echo "[ DONE ]"
 
 	echo '[ COMPLETED ]'
