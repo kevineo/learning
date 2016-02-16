@@ -36,6 +36,7 @@ MAC OSX - [Here](https://raw.githubusercontent.com/hollowaykeanho/learning/maste
 
 3) The follow the automation instruction. Please watch and stay tuned for the prompted inputs from time to time.
 
+<br><br>
 
 # References
 ## Mac
