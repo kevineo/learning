@@ -13,8 +13,10 @@ int a = 10;
 while (a < 20) {
 	NSLog(@"loop index: %d", a);
 	a++;
-	if (a == 12) { continue; } // Skip a particular entries
-	if (a == 18) { break; } // break the loop
+	if (a == 12)
+		continue;		// Skip a particular entries
+	if (a == 18)
+		break; 			// break the loop
 }
 
 
