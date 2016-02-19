@@ -101,19 +101,19 @@ double asDouble = [string doubleValue];
 /*
  * Numbers
  */
-	int number = -1211;
-	unsigned int number = 234234;
+int number = -1211;
+unsigned int number = 234234;
 
-	short number = -32423423;
-	unsigned short number = 234234234l;
+short number = -32423423;
+unsigned short number = 234234234l;
 
-	long number = -2342342;
-	unsigned long number = 234234234234;
+long number = -2342342;
+unsigned long number = 234234234234;
 
-	long long number = -32423423423423;
-	unsigned long long number = 23423423423423423423;
+long long number = -32423423423423;
+unsigned long long number = 23423423423423423423;
 
-	float number = -21.09f;
+float number = -21.09f;
 
 
 
@@ -121,10 +121,10 @@ double asDouble = [string doubleValue];
 /*
  * Arrays
  */
-	double numbers[5] = {11500, 20002, 112, 1234, 222};
+double numbers[5] = {11500, 20002, 112, 1234, 222};
 
 		//determine size of array
-	int arraySize = sizeof(numbers) / sizeof(numbers[0]);
+int arraySize = sizeof(numbers) / sizeof(numbers[0]);
 
 
 
@@ -132,8 +132,8 @@ double asDouble = [string doubleValue];
 /*
  * Pointers
  */
-	int var = 20;
-	int *ip = &var; // Delcare and references
+int var = 20;
+int *ip = &var; // Delcare and references
 
 
 
