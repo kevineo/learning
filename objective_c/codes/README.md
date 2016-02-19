@@ -5,8 +5,17 @@ Please browse through each file for quick referencing.
 ## Assumption
 1. You're familiar with C.
 
+<br><br>
+
 ## Basic.m
 Basic.m contains all known datatypes and its maniuplation.
+
+<br><br>
+
+## Logic.m
+Logic.m contains all known logics and looping.
+
+<br><br>
 
 ## References
 1. http://www.tutorialspoint.com/objective_c/objective_c_type_casting.htm
