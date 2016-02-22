@@ -25,6 +25,13 @@ $ sudo apt-get install firefox xvfb libqtwebkit-dev x11-xkb-utils -y
 $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic -y
 ```
 
+<br>
+If you're on Mac, you'll need to install these packages, assuming you're using
+Brew:
+```
+$ brew install qt5
+$ brew link --force qt5
+```
 
 <br><br>
 
@@ -53,8 +60,11 @@ $ rails new <app_name> --database=postgresql
 ```
 gem 'puma'
 
-group :development, :test do
+group :development do
   gem 'byebug'
+end
+
+group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-puma'
