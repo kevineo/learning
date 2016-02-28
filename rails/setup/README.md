@@ -64,11 +64,11 @@ $ sh script_name.sh
 The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is installed successfully / correctly.
 
 <br>
-There are 2 generals checking steps you need to do:
+There are 3 generals checking steps you need to do:
 
 <br><br>
-## 1) Check for successful installation
-Within the terminal after your automated installation is completed:
+1) Check for successful installation within the terminal after your automated
+installation is completed:
 
 Ubuntu / Linux: (you should see your ruby and rails is source from .rvm folder)
 
@@ -93,9 +93,22 @@ $
 
 <br><br>
 
-## 2) Ensure terminal always source the correct Ruby
-Now close the terminal window and open a new one. Perform step #1 again.
-You should expect the same result.
+2) Ensure terminal always get the Ruby and Rails fro correct source.
+
+<br>
+> Close the terminal window and open a new one. Perform step #1 again.
+> You should expect the same result.
+
+<br><br>
+
+3) Generate a new rails app.
+
+Create a new rails app and ensure it's working fine after step #1 and step #2.
+
+```
+$ rails new testing_app --database=postgresql
+```
+
 
 <br><br>
 # Troubleshooting
