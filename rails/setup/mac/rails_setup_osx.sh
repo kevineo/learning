@@ -165,6 +165,9 @@ select opt in $OPTIONS; do
 		"NO")
 			echo "automation will not work without xcode."
 			echo "please go to app store and install Xcode now."
+			echo "---------------------------------------------"
+			echo "Press ENTER to continue."
+			read temp
 			xcode_agreement
 			break
 			;;
