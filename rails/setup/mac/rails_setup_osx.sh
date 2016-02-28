@@ -73,12 +73,7 @@ function install_git {
 
 function setup_ssh {
 	echo '== Setting Up SSH =='
-	# Process name
-	echo -n "Processing input for setup... "
-	local email=$1
-	echo "[ DONE ]"
-
-	ssh-keygen -t rsa -C $email
+	echo -e "\n\n\n" | ssh-keygen -t rsa
 	echo '[ COMPLETED ]'
 }
 

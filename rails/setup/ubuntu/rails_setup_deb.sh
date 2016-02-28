@@ -23,8 +23,6 @@ function install_postgresql {
 
 
 function setup_ssh {
-	local $email=$1
-
 	echo -e "\n\n\n" | ssh-keygen -t rsa
 	ssh-add ~/.ssh/id_rsa
 }
