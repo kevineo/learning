@@ -130,9 +130,9 @@ echo "| Inquire Input                   |"
 echo "-----------------------------------"
 echo ""
 
-echo -n "Your Name For Github Signature: "
+echo -n "Your Name For Github Signature (Supply a string with \"\"): "
 read user_username
-echo -n "Your Email For Github Signature: "
+echo -n "Your Email For Github Signature (Supply a string with \"\"): "
 read user_email
 
 # Inquire Ruby Version to be installed
