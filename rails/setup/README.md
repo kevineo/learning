@@ -61,7 +61,7 @@ $ sh script_name.sh
 <br><br>
 
 # Checking
-The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is installed successfully / correctly.
+The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is **not** installed successfully / correctly.
 
 <br>
 There are 3 generals checking steps you need to do:
