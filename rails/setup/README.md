@@ -29,9 +29,9 @@ $ cd ~/Desktop
 
 <br><br>
 
-3) Download the correct script. Right click and save the script.
+3) Download the correct script using the following command:
 
-Ubuntu or Xubuntu - [Here](https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/ubuntu/rails_setup_deb.sh)
+Ubuntu or Xubuntu:
 
 ```
 $ wget https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/ubuntu/rails_setup_deb.sh
