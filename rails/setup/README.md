@@ -17,7 +17,7 @@ Version 0.5.3
 | Raspberry Pi Ubuntu Mate 15.04 64-bit      |  0.5.0   | tested working |
 
 # To start
-1) Installation needs sudo or admin authority. Please request from your admin / owner if you do have sudo password.
+1) Installation needs sudo or admin authority. Please request from your admin / owner if you do not have the sudo password.
 
 <br><br>
 
@@ -61,7 +61,7 @@ $ sh script_name.sh
 <br><br>
 
 # Checking
-The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is **not** installed successfully / correctly.
+The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is considered **not** installed successfully / correctly.
 
 <br>
 There are 3 generals checking steps you need to do:
