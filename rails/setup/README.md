@@ -70,7 +70,7 @@ There are 3 generals checking steps you need to do:
 1) Check for successful installation within the terminal after your automated
 installation is completed:
 
-Ubuntu / Linux: (you should see your ruby and rails is source from .rvm folder)
+> Ubuntu / Linux: (you should see your ruby and rails is source from .rvm folder)
 
 ```
 $ which ruby
@@ -81,7 +81,7 @@ $
 ```
 
 <br>
-Mac User: (you should see your ruby and rails is source from .rbenv folder)
+> Mac User: (you should see your ruby and rails is source from .rbenv folder)
 
 ```
 $ which ruby
@@ -95,7 +95,6 @@ $
 
 2) Ensure terminal always get the Ruby and Rails fro correct source.
 
-<br>
 > Close the terminal window and open a new one. Perform step #1 again.
 > You should expect the same result.
 
