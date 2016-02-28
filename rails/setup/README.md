@@ -21,7 +21,11 @@ Version 0.5.3
 
 <br><br>
 
-2) Go to desktop folder.
+2) Launch the Terminal application.
+
+<br><br>
+
+3) In the Terminal, navigate to your Desktop folder by typing the following command:
 
 ```
 $ cd ~/Desktop
@@ -29,7 +33,7 @@ $ cd ~/Desktop
 
 <br><br>
 
-3) Download the correct script using the following command:
+4) Download the correct script using the following command:
 
 Ubuntu or Xubuntu:
 
@@ -47,7 +51,7 @@ $ curl -# -O https://raw.githubusercontent.com/hollowaykeanho/learning/master/ra
 
 <br><br>
 
-4) Perform the following command:
+5) Perform the following command (change `script_name.sh` to the name of the file that you've just downloaded to your desktop):
 
 ```
 $ chmod +x script_name.sh
@@ -56,21 +60,24 @@ $ sh script_name.sh
 
 <br><br>
 
-5) The follow the automation instruction. Please watch and stay tuned for the prompted inputs from time to time.
+6) Follow the automation instructions. Please watch and stay tuned for the prompted inputs from time to time.
 
 <br><br>
 
 # Checking
-The script is a straight forward installation without feedback control. Hence, should there is an error in installation (say rbenv was not installed properly), your rails is considered **not** installed successfully / correctly.
+After the installation is completed, you need to verify that all the settings are configured properly.
 
 <br>
-There are 3 generals checking steps you need to do:
+
+The script is a straight forward installation without feedback control. Hence, should there be any error during the installation (say rbenv was not installed properly), your Rails is considered **not** installed successfully / correctly.
+
+<br>
+There are 3 general checking steps you need to perform:
 
 <br><br>
-1) Check for successful installation within the terminal after your automated
-installation is completed:
+1) Check for successful installation within the Terminal after your automated installation is completed:
 
-> Ubuntu / Linux: (you should see your ruby and rails is source from .rvm folder)
+> Ubuntu / Linux: (you should see your Ruby and Rails is source from .rvm folder)
 
 ```
 $ which ruby
@@ -81,7 +88,7 @@ $
 ```
 
 <br>
-> Mac User: (you should see your ruby and rails is source from .rbenv folder)
+> Mac User: (you should see your Ruby and Rails is source from .rbenv folder)
 
 ```
 $ which ruby
@@ -93,16 +100,16 @@ $
 
 <br><br>
 
-2) Ensure terminal always get the Ruby and Rails fro correct source.
+2) Ensure Terminal always get the Ruby and Rails from correct source.
 
-> Close the terminal window and open a new one. Perform step #1 again.
-> You should expect the same result.
+> Close the Terminal window and open a new one. Perform step #1 again.
+> You should get the same result.
 
 <br><br>
 
-3) Generate a new rails app.
+3) Generate a new Rails app.
 
-Create a new rails app and ensure it's working fine after step #1 and step #2.
+Create a new Rails app and ensure it's working fine after step #1 and step #2.
 
 ```
 $ rails new testing_app --database=postgresql
@@ -111,7 +118,7 @@ $ rails new testing_app --database=postgresql
 
 <br><br>
 # Troubleshooting
-If your installation has failed, you can perform the following instruction to remove the existing contents (if any).
+If your installation failed, you can perform the following command to remove the existing contents (if any).
 
 <br>
 Ubuntu / Linux:
@@ -128,7 +135,7 @@ $ rm -rf ~/.rbenv
 ```
 
 <br>
-Once done, you can restart the script again or you can do it manually where the steps are available in the reference section.
+Once done, you can restart the script again or install Rails manually (instructions are available in the reference section below)
 
 <br><br>
 
