@@ -3,6 +3,8 @@ This folder is created for automating Ruby on Rails installation.
 
 Version 0.5.3
 
+<br><br>
+
 # OS support start from version:
 | OS                                         | Version  |     Status     |
 |:-------------------------------------------|:--------:|:--------------:|
@@ -116,6 +118,7 @@ $ rm -rf ~/.rbenv
 <br>
 Once done, you can restart the script again or you can do it manually where the steps are available in the reference section.
 
+<br><br>
 
 # References
 ## Mac
