@@ -41,7 +41,7 @@ $ wget https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/se
 MAC OSX:
 
 ```
-$ curl -# -O https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/mac/rails_setup_osx.sh
+$ curl -O https://raw.githubusercontent.com/hollowaykeanho/learning/master/rails/setup/mac/rails_setup_osx.sh
 ```
 
 
