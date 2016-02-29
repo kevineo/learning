@@ -1,7 +1,7 @@
 # Rails Setup Bash Script
 This folder is created for automating Ruby on Rails installation.
 
-Version 0.5.3
+Version 0.5.4
 
 <br><br>
 

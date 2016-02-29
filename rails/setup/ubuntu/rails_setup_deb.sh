@@ -4,7 +4,7 @@
 function install_postgresql {
 	echo '== Install Postgresql =='
 
-	local user=$USER
+	local user=$1
 
 	sudo apt-get update -y
 	sudo apt-get install -y postgresql-common postgresql-contrib
@@ -107,7 +107,7 @@ select opt in $OPTIONS; do
 	esac
 done
 
-install_postgresql
+install_postgresql $USER
 
 echo "==================================================="
 echo "Inquiry completed. Press Enter to begin automation."
