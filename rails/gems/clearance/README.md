@@ -12,7 +12,7 @@ I'm assuming you already done the following:
 4. you know your git very well.
 
 ## Steps
-1) Setup your Figaro.
+1) Setup your [Figaro](https://github.com/hollowaykeanho/learning/tree/master/rails/gems/figaro).
 
 <br>
 
