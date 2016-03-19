@@ -97,7 +97,7 @@ production:
 
 4) Setup the OpenShift app using rhc in terminal:
 ```
-$ rhc app-create sniffy ruby-2.0 postgresql-9.2
+$ rhc app-create -s sniffy ruby-2.0 postgresql-9.2
 ```
 
 > NOTE:
