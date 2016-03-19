@@ -97,13 +97,21 @@ production:
 
 4) Setup the OpenShift app using rhc in terminal:
 ```
+# Scalable (database is separated)
 $ rhc app-create -s sniffy ruby-2.0 postgresql-9.2
+
+# Non-Scalable (all crunch into one app)
+$ rhc app-create sniffy ruby-2.0 postgresql-9.2
 ```
 
 > NOTE:
 >
 > The actual command is:
 > ```
+> # Scalable App
+> $ rhc app-create -s <app_name> <cartiage> <database type>
+>
+> # Non-Scalable App
 > $ rhc app-create <app_name> <cartiage> <database type>
 > ```
 >
@@ -171,8 +179,23 @@ $ git remote add openshift gits://eethehaehaehaeh@sniffy-parallax.com/~/git/snif
 
 <br><br>
 
+7) Set the environment variables for rails bundler and environments
+```
+$ rhc env-set RAILS_ENV=production -a sniffy
+$ rhc env-set BUNDLE_WITHOUT="development test" -a sniffy
+```
 
-7) Merge the remote repo with the local version using git pull command.
+> NOTE:
+>
+> The actual command is:
+> ```
+> $ rhc env-set <LABEL>=<VALUE> -a <APP NAME>
+> ```
+
+
+<br><br>
+
+8) Merge the remote repo with the local version using git pull command.
 You should expect a conflict for config.ru file.
 ```
 $ git pull openshift master
@@ -189,7 +212,7 @@ $ git pull openshift master
 <br><br>
 
 
-8) Resolve the conflict by selecting your config.ru, not remote. It should looks
+9) Resolve the conflict by selecting your config.ru, not remote. It should looks
 something like this:
 ```
 #This file is used by Rack-based servers to start the application.
@@ -203,14 +226,14 @@ run Rails.application
 
 
 
-9) If a new folder named as the app name exist inside your rails app, delete it.
+10) If a new folder named as the app name exist inside your rails app, delete it.
 By right you should only be facing config.ru conflict only.
 
 
 <br><br>
 
 
-10) Add and complete the merge conflicts
+11) Add and complete the merge conflicts
 ```
 $ git add config.ru
 $ git commit
@@ -223,7 +246,7 @@ $ git commit
 <br><br>
 
 
-11) Create the file and corresponding folder(s) inside
+12) Create the file and corresponding folder(s) inside
 **.openshift/action_hooks/override/restart** with the following contents:
 ```
 #!/bin/bash -e
@@ -244,7 +267,7 @@ popd >/dev/null
 <br><br>
 
 
-12) Create the file and corresponding folder(s) inside
+13) Create the file and corresponding folder(s) inside
 **.openshift/action_hooks/override/start** with the following contents:
 ```
 #!/bin/bash -e
@@ -270,7 +293,7 @@ popd > /dev/null
 <br><br>
 
 
-13) Create the file and corresponding folder(s) inside
+14) Create the file and corresponding folder(s) inside
 **.openshift/action_hooks/override/stop** with the following contents:
 ```
 #!/bin/bash -e
@@ -292,7 +315,7 @@ fi
 <br><br>
 
 
-14) Create the file and corresponding folder(s) inside
+15) Create the file and corresponding folder(s) inside
 **.openshift/action_hooks/deploy** with the following contents:
 ```
 #!/bin/bash -e
@@ -324,7 +347,7 @@ fgrep -qx 'source "${OPENSHIFT_RUBY_DIR}/lib/_override.sh"' "${OPENSHIFT_RUBY_DI
 <br><br>
 
 
-15) Commit the .openshift changes with git commit
+16) Commit the .openshift changes with git commit
 ```
 $ git add .
 $ git commit -m "updated .openshift to control puma"
@@ -334,7 +357,7 @@ $ git commit -m "updated .openshift to control puma"
 <br><br>
 
 
-16) Setup your puma configurations in **config/puma.rb**:
+17) Setup your puma configurations in **config/puma.rb**:
 ```
 workers Integer(ENV['WEBCONCURRENCY'] || 2)
 threads_count = Integer(ENV['MAX_THREADS'] || 5)
@@ -350,7 +373,7 @@ environment ENV['RACK_ENV'] || 'development'
 <br><br>
 
 
-17) Commit the puma configurations with git commit
+18) Commit the puma configurations with git commit
 ```
 $ git add .
 $ git commit -m "added puma configuratons"
@@ -360,7 +383,7 @@ $ git commit -m "added puma configuratons"
 <br><br>
 
 
-18) Deploy your app using git push:
+19) Deploy your app using git push:
 ```
 $ git push openshift master
 ```
@@ -369,7 +392,7 @@ $ git push openshift master
 <br><br>
 
 
-19) Migrate your database using the following commands:
+20) Migrate your database using the following commands:
 ```
 $ rhc ssh sniffy
 RSA 1024 bit CA certificates are loaded due to old openssl compatibility
