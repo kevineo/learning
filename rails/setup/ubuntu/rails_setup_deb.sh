@@ -11,11 +11,11 @@ function install_postgresql {
 	sudo apt-get install -y postgresql libpq-dev
 
 	# Setup user for Postgresql
-	sudo -u postgres createuser $user -s
+	sudo -u postgres createuser $USER -s
 	sudo -u postgres psql --command "\\password $user"
 
 	# Run the setup
-	service postgresql start
+	sudo service postgresql start
 	sudo update-rc.d postgresql enable
 
 	echo '[ COMPLETED ]'
